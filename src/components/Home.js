@@ -18,7 +18,7 @@ export const Home = () => {
     {
       hoteldetails.map((items)=>(
         
-          <Resturantcard name={items.name} add={items.address} image={items.photograph}/>
+          <Resturantcard name={items.name} add={items.address} image={items.photograph} id={items.id}/>
       
         )
       )}

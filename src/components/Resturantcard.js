@@ -1,8 +1,10 @@
 import React from 'react'
 import {Card,Row} from 'react-bootstrap'
-const Resturantcard = ({name,add,image}) => {
+import {Link} from 'react-router-dom'
+const Resturantcard = ({name,add,image,id}) => {
   return (
-  <div className='col-md-6'>
+  <div >
+    <Link to={`/resturant/${id}`}>
     <Card style={{ width: '15rem' }}>
     <Card.Img variant="top" src={image} />
     <Card.Body>
@@ -13,6 +15,8 @@ const Resturantcard = ({name,add,image}) => {
     
     </Card.Body>
   </Card>
+    </Link>
+   
 </div>
 
 
