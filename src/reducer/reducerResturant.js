@@ -9,6 +9,12 @@ import {
       switch(actions.type)
       {
           case RESTURANT_LIST_SUCCESS:
-          return{resturant:actions.payload}
+            return{resturant:actions.payload}
+          case RESTURANT_LIST_REQUEST:
+              return{resturants:[]}
+          case RESTURANT_LIST_FAIL:
+              return{error:actions.payload}
+          default:
+              return states
       }
   }

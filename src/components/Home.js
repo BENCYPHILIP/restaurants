@@ -12,6 +12,7 @@ export const Home = () => {
     fetchdata();
   }, []);
 
+
   console.log("datas", hoteldetails);
   return (
     <div>
