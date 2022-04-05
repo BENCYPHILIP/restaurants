@@ -4,11 +4,10 @@ import {Link} from 'react-router-dom'
 const Resturantcard = ({name,image,id,cuisine_type,neighborhood}) => {
   return (
   <div >
-  
-    <Card style={{ width: '18rem' }}>
+  <Card style={{ width: '18rem'}}>
   <Card.Img variant="top" src={image} className="p-3" />
   <Card.Body>
-    <Card.Title>{name}</Card.Title>
+    <Card.Title style={{ color: '#8a2b06',fontWeight:'bold'}}>{name}</Card.Title>
     <Card.Text>
     <p><strong>Cuisine:</strong> {cuisine_type}</p>
     </Card.Text>
@@ -16,7 +15,7 @@ const Resturantcard = ({name,image,id,cuisine_type,neighborhood}) => {
     <p>{neighborhood}</p>
     </Card.Text>
     <Link to={`/resturant/${id}`}>
-    <Button style={{backgroundColor:'#8a2b06'}}>Click Me</Button>
+    <Button variant="danger">Click Me</Button> 
     </Link>
   </Card.Body>
 </Card>

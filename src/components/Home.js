@@ -18,18 +18,15 @@ export const Home = () => {
   console.log("datas", hoteldetails);
   return (
     <div>
-      <Row style={{display: 'flex', flexDirection: 'row'}}>
-    {
-
+    <Row style={{display: 'flex', flexDirection: 'row'}} className="g-4">
+      {
       hoteldetails.map(items => (
             <Col sm={12} md={8} lg={6} xl={3} >
               <Resturantcard name={items.name} image={items.photograph} id={items.id} cuisine_type={items.cuisine_type} neighborhood={items.neighborhood}/>
-          </Col>
-        
-        ))
-        
+            </Col>      
+        ))        
       }
-      </Row>
+    </Row>
     </div>
   );
 };
