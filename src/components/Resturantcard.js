@@ -1,21 +1,26 @@
 import React from 'react'
-import {Card,Row} from 'react-bootstrap'
+import {Card,Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-const Resturantcard = ({name,add,image,id}) => {
+const Resturantcard = ({name,image,id,cuisine_type,neighborhood}) => {
   return (
   <div >
+  
+    <Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src={image} className="p-3" />
+  <Card.Body>
+    <Card.Title>{name}</Card.Title>
+    <Card.Text>
+    <p><strong>Cuisine:</strong> {cuisine_type}</p>
+    </Card.Text>
+    <Card.Text as="div">
+    <p>{neighborhood}</p>
+    </Card.Text>
     <Link to={`/resturant/${id}`}>
-    <Card style={{ width: '15rem' }}>
-    <Card.Img variant="top" src={image} />
-    <Card.Body>
-      <Card.Title>{name}</Card.Title>
-      <Card.Text>
-       {add}
-      </Card.Text>
-    
-    </Card.Body>
-  </Card>
+    <Button style={{backgroundColor:'#8a2b06'}}>Click Me</Button>
     </Link>
+  </Card.Body>
+</Card>
+   
    
 </div>
 

@@ -3,22 +3,15 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 
  const Header = () => {
   return (
-    <div>
-        <>
   
-  <Navbar bg="primary" variant="dark">
+  <Navbar variant="dark" sticky="top" style={{backgroundColor: '#8a2b06'}} >
     <Container>
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="#home"><h1>Restaurant</h1></Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">pricing</Nav.Link>
     </Nav>
     </Container>
   </Navbar>
-
-</>
-    </div>
   )
 }
 

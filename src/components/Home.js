@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Resturantcard from './Resturantcard'
+import { Row,Col } from 'react-bootstrap';
+
 export const Home = () => {
   const [hoteldetails, setHoteldeatils] = useState([]);
 
@@ -16,13 +18,18 @@ export const Home = () => {
   console.log("datas", hoteldetails);
   return (
     <div>
+      <Row style={{display: 'flex', flexDirection: 'row'}}>
     {
-      hoteldetails.map((items)=>(
+
+      hoteldetails.map(items => (
+            <Col sm={12} md={8} lg={6} xl={3} >
+              <Resturantcard name={items.name} image={items.photograph} id={items.id} cuisine_type={items.cuisine_type} neighborhood={items.neighborhood}/>
+          </Col>
         
-          <Resturantcard name={items.name} add={items.address} image={items.photograph} id={items.id}/>
-      
-        )
-      )}
+        ))
+        
+      }
+      </Row>
     </div>
   );
 };
