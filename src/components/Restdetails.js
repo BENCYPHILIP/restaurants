@@ -1,5 +1,6 @@
 import React,{useState,useEffect}from 'react'
 import { useParams } from 'react-router-dom';
+import Marquee from "react-fast-marquee";
 import { Row, Col, Image, ListGroup } from 'react-bootstrap';
 const Restdetails = () => {
     const [indvhoteldetails, setindvHoteldeatils] = useState([]);
@@ -20,19 +21,22 @@ useEffect(() => {
 
   console.log("datas", indvhoteldetails);
   return (
-    <div>Restdetails
+    <div>
+        <br/>
+        <Marquee style={{color:'#8a2b06', fontSize:'20px'}} width="60%" direction="left" scrolldelay="500" text  ="red" height="100px">“Part of the secret of success is to eat what you like and let the food fight it out inside.” </Marquee>
     
     {details ?
                 (
+                    
                     <Row className="my-3 ">
-                        <Col md={3}>
+                        <Col md={3} >
                             <Image className="img" src={details.photograph} alt={details.name} fluid />
                         </Col>
                         <Col md={4}>
                             <ListGroup.Item>
                                 <h2>{details.name}</h2>
                                 <p>{details.neighborhood}</p>
-                            </ListGroup.Item>
+                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <p><strong>Cuisine:</strong> {details.cuisine_type}</p>
                             </ListGroup.Item>
@@ -53,6 +57,7 @@ useEffect(() => {
                                 <p>Sunday: {details.operating_hours.Sunday}</p>
                             </ListGroup.Item>
                         </Col>
+
                     </Row>
                 ) : null
             }

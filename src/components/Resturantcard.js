@@ -15,17 +15,11 @@ const Resturantcard = ({name,image,id,cuisine_type,neighborhood}) => {
     <p>{neighborhood}</p>
     </Card.Text>
     <Link to={`/resturant/${id}`}>
-    <Button variant="danger">Click Me</Button> 
+    <Button variant="danger">See More</Button> 
     </Link>
   </Card.Body>
 </Card>
-   
-   
 </div>
-
-
-
-
   )
 }
 
