@@ -8,8 +8,9 @@ import {Link} from 'react-router-dom'
     <Container>
     <Navbar.Brand href="#home"><h3 style={{fontWeight:'bold'}}>Restaurant</h3></Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link to="/">Home</Nav.Link>
+      <Nav.Link href="/">Home</Nav.Link>
     </Nav>
+
     </Container>
   </Navbar>
   
